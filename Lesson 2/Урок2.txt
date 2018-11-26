@@ -1,0 +1,60 @@
+console.log('this is the start');
+
+
+setTimeout(function outText() {
+console.log('this is from callback');
+}, 5000);
+
+console.log ('this is the end')
+
+function - callback
+
+
+this is the start
+this is the end
+this is from callback - сначала ждет в heap, потом попадает в очередь, потом уже выполняться все команды, что ниже, а потом уже попадет в stack
+колбэк попадет в стэк только тогда, когда стэк будет полностью пустым
+колбэк попадет в стэк минимум через 5 секунд
+
+function f(){
+    delay();
+}
+
+$.on('document','scroll',f); // отслеживатель событий
+
+добавляет функцию, чтобы он добавил ее в очередь
+
+
+function a() {
+console.log('this is the start');
+console.log('this is from callback');
+console.log ('this is the end')
+a();
+}
+
+В ноде можно использовать модули - подключать к одному файлу другие файлы.
+
+Модули подключаются при помощи функции require
+Отдельные модули удобны при большом проекте - он разбивается на модули. Код более понятный и удобный
+У ноды есть стандартные модули, которые тоже можно вызывать при помощи функции require
+
+const p = require('./print');
+
+p('kakya-to stroka')
+
+Файл print.js:
+
+function p(out){
+    console.log(out);
+}
+
+module.exports = p;
+
+решение задания с квадратом, нарисованным звездочками, можно сделать и массивом
+
+s - это объект, у которого два метода - square и triangle.
+
+Путь чтения сохранен в файле txt
+Функция выполняется ассинхронно
+В момент когда строки считаны -
+
